@@ -1,0 +1,234 @@
+{
+    "Exciting": [
+        {
+            "name": "We Are Electric",
+            "author": "Flying Steps",
+            "time": "03:28",
+            "url":"mp3/We Are Electric.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/We Are Electric.jpg"
+        },
+        {
+            "name": "Spectre",
+            "author": "Alan Walker",
+            "time": "03:50",
+            "url":"mp3/Spectre.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/Spectre.jpg"
+        },
+        {
+            "name": "Liberators",
+            "author": "Epic Score",
+            "time": "02:36",
+            "url":"mp3/Liberators.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/Liberators.jpg"
+        },
+        {
+            "name": "Faded",
+            "author": "Alan Walker",
+            "time": "03:32",
+            "url":"mp3/Faded.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/Faded.jpg"
+        },
+        {
+            "name": "Go Time",
+            "author": "Mark Petrie",
+            "time": "02:16",
+            "url":"mp3/Mark Petrie - Go Time.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/Go Time.jpg"
+        },
+        {
+            "name": "Seven",
+            "author": "Tobu",
+            "time": "03:50",
+            "url":"mp3/Tobu - Seven.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/Tobu - Seven.jpg"
+        },
+        {
+            "name": "Ngẫu Hứng (PDD洪荒之力)",
+            "author": "Hoaprox",
+            "time": "02:41",
+            "url":"mp3/Hoaprox - Ngẫu Hứng.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/Hoaprox - Ngẫu Hứng.jpg"
+        }
+    ],
+    "Exciting_Rank": [
+        {
+            "name": "Spectre",
+            "author": "Alan Walker",
+            "time": "03:50",
+            "url":"mp3/Spectre.mp3",
+            "play_times": 554,
+            "poster_url":"mp3/poster/Spectre.jpg"
+        },
+        {
+            "name": "Seven",
+            "author": "Tobu",
+            "time": "03:50",
+            "url":"mp3/Tobu - Seven.mp3",
+            "play_times": 350,
+            "poster_url":"mp3/poster/Tobu - Seven.jpg"
+        },
+        {
+            "name": "Ngẫu Hứng (PDD洪荒之力)",
+            "author": "Hoaprox",
+            "time": "02:41",
+            "url":"mp3/Hoaprox - Ngẫu Hứng.mp3",
+            "play_times": 220,
+            "poster_url":"mp3/poster/Hoaprox - Ngẫu Hứng.jpg"
+        },
+        {
+            "name": "We Are Electric",
+            "author": "Flying Steps",
+            "time": "03:28",
+            "url":"mp3/We Are Electric.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/We Are Electric.jpg"
+        },
+        {
+            "name": "Five Hours",
+            "author": "Deorro",
+            "time": "05:26",
+            "url":"mp3/deorro - five hours.mp3",
+            "play_times": 90,
+            "poster_url":"mp3/poster/deorro - five hours.jpg"
+        },
+        {
+            "name": "Liberators",
+            "author": "Epic Score",
+            "time": "02:36",
+            "url":"mp3/Liberators.mp3",
+            "play_times": 72,
+            "poster_url":"mp3/poster/Liberators.jpg"
+        },
+        {
+            "name": "Go Time",
+            "author": "Mark Petrie",
+            "time": "02:16",
+            "url":"mp3/Mark Petrie - Go Time.mp3",
+            "play_times": 63,
+            "poster_url":"mp3/poster/Go Time.jpg"
+        }
+    ],
+    "Melodious":[
+        {
+            "name": "The truth that you leave",
+            "author": "Pianoboy",
+            "time": "03:43",
+            "url":"mp3/Pianoboy - The truth that you leave.mp3",
+            "play_times": 763,
+            "poster_url":"mp3/poster/Pianoboy - The truth that you leave.jpg"
+        },
+        {
+            "name": "China-X",
+            "author": "徐梦圆",
+            "time": "03:46",
+            "url":"mp3/China-X.mp3",
+            "play_times": 554,
+            "poster_url":"mp3/poster/China-X.jpg"
+        },
+        {
+            "name": "Tassel",
+            "author": "Cymophane",
+            "time": "04:30",
+            "url":"mp3/Cymophane - Tassel.mp3",
+            "play_times": 350,
+            "poster_url":"mp3/poster/Cymophane - Tassel.jpg"
+        },
+        {
+            "name": "千灯引",
+            "author": "RE",
+            "time": "04:26",
+            "url":"mp3/RE - qdy.mp3",
+            "play_times": 220,
+            "poster_url":"mp3/poster/RE - qdy.jpg"
+        },
+        {
+            "name": "致大学",
+            "author": "文武贝",
+            "time": "03:07",
+            "url":"mp3/wwb-zdx.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/wwb-zdx.jpg"
+        },
+        {
+            "name": "寻",
+            "author": "三亩地",
+            "time": "03:07",
+            "url":"mp3/xun.mp3",
+            "play_times": 90,
+            "poster_url":"mp3/poster/xun.jpg"
+        },
+        {
+            "name": "At The Edge",
+            "author": "千坂",
+            "time": "03:20",
+            "url":"mp3/At The Edge.mp3",
+            "play_times": 72,
+            "poster_url":"mp3/poster/At The Edge.jpg"
+        }
+    ],
+    "Melodious_Rank":[
+        {
+            "name": "The truth that you leave",
+            "author": "Pianoboy",
+            "time": "03:43",
+            "url":"mp3/Pianoboy - The truth that you leave.mp3",
+            "play_times": 763,
+            "poster_url":"mp3/poster/Pianoboy - The truth that you leave.jpg"
+        },
+        {
+            "name": "China-X",
+            "author": "徐梦圆",
+            "time": "03:46",
+            "url":"mp3/China-X.mp3",
+            "play_times": 554,
+            "poster_url":"mp3/poster/China-X.jpg"
+        },
+        {
+            "name": "Tassel",
+            "author": "Cymophane",
+            "time": "04:30",
+            "url":"mp3/Cymophane - Tassel.mp3",
+            "play_times": 350,
+            "poster_url":"mp3/poster/Cymophane - Tassel.jpg"
+        },
+        {
+            "name": "千灯引",
+            "author": "RE",
+            "time": "04:26",
+            "url":"mp3/RE - qdy.mp3",
+            "play_times": 220,
+            "poster_url":"mp3/poster/RE - qdy.jpg"
+        },
+        {
+            "name": "致大学",
+            "author": "文武贝",
+            "time": "03:07",
+            "url":"mp3/wwb-zdx.mp3",
+            "play_times": 120,
+            "poster_url":"mp3/poster/wwb-zdx.jpg"
+        },
+        {
+            "name": "寻",
+            "author": "三亩地",
+            "time": "03:07",
+            "url":"mp3/xun.mp3",
+            "play_times": 90,
+            "poster_url":"mp3/poster/xun.jpg"
+        },
+        {
+            "name": "At The Edge",
+            "author": "千坂",
+            "time": "03:20",
+            "url":"mp3/At The Edge.mp3",
+            "play_times": 72,
+            "poster_url":"mp3/poster/At The Edge.jpg"
+        }
+    ]
+}

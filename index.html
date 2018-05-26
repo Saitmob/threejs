@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/vue.min.js"></script>
+    
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/MTLLoader.js"></script>
+    <script src="js/OBJLoader.js"></script>
+</head>
+<style>
+</style>
+
+<body>
+
+
+    <div class="main" id="main" @mouseup="vMup($event)" v-cloak>
+        <div class="audio-box">
+            <div class="music-poster m-btn">
+                <img v-bind:src="currPosterUrl" alt="" id="current-music-poster" ref="poster">
+                <!-- <script>
+                var b = document.getElementById('current-music-poster');
+                console.log(b.src);
+                </script> -->
+            </div>
+            <div class="music-ctl">
+                <div class="music-name" id="current-music-name" v-text="currMusicName">Spectre</div>
+                <div class="music-artist" id="current-music-artist" v-text="currArtist">未知</div>
+                <div class="music-control">
+                    <div class="fl">
+                        <div class="pre m-btn" @click="playPreBtn()"></div>
+                        <div class="play-p m-btn" id="play-btn" @click="playOrpause()"></div>
+                        <div class="next m-btn" @click="playNextBtn()"></div>
+                    </div>
+                    <div class="volume fr">
+                        <div class="horn fl m-btn" @click="muteBtnEvent()"></div>
+                        <div class="slider" @mousedown="vMdown($event,86)">
+                            <div class="pace"></div>
+                            <div class="slider-handle" @mousedown="vMdown($event,86)" id="slider-handle-volume"></div>
+                        </div>
+                    </div>
+                    <!-- 音乐进度条 -->
+                    <div class="loaded slider" id="loaded" @mousedown="vMdown($event,344,'music')">
+                        <div class="pace" id="pace"></div>
+                        <div class="slider-handle" @mousedown="vMdown($event,344,'music')"></div>
+                    </div>
+                    <div class="duration-time fl">
+                        <span id="current-time">00:00</span> /
+                        <span id="duration" v-text="currDuration">00:00</span>
+                    </div>
+                    <div class="mode-control fr">
+                        <span class="mode-list m-btn current-mode" @click="playMode($event,'list')"></span>
+                        <span class="mode-single m-btn" @click="playMode($event,'single')"></span>
+                        <span class="mode-random m-btn" @click="playMode($event,'random')"></span>
+                    </div>
+                </div>
+            </div>
+
+            <audio controls="controls" id="audio" style="display:none" preload="auto" src="mp3/We Are Electric.mp3">
+                <!-- <source src="mp3/Faded.mp3" type='audio/mpeg'> 你的浏览器不支持audio标签 -->
+            </audio>
+        </div>
+        <div class="m-left">
+            <h2 class="p-title">Exciting<a href="javascript:;">more</a></h2>
+            <div class="music-list">
+                <ul id="Exciting">
+                    <li>
+                        <span class="list-name">音乐标题</span>
+                        <span class="list-author">歌手</span>
+                        <span class="list-time">时长</span>
+                    </li>
+                    <li v-for="item in Exciting" @click="playListMusic($event,item)" v-bind:audio-src="item.url">
+                        <span class="m-name">{{item.name}}</span>
+                        <span class="m-author">{{item.author}}</span>
+                        <span class="m-time">{{item.time}}</span>
+                        <span class="m-poster">{{item.poster_url}}</span>
+                        <span class="m-play-times">{{item.play_times}}</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="m-right">
+            <h2 class="p-title">TOP7 <a href="javascript:;">more</a></h2>
+            <div class="music-list">
+                <ul id="Exciting_Rank">
+                    <li>
+                        <span class="r-title-name">音乐标题</span>
+                        <span class="r-title-author">歌手</span>
+                        <span class="r-title-times">播放次数</span>
+                    </li>
+                    <li v-for="(item,i) in Exciting_Rank" @click="playListMusic($event,item)" v-bind:title="item.name" v-bind:audio-src="item.url">
+                        <span v-bind:class="rank_n(i+1)">{{i+1}}</span>
+                        <span class="m-name">{{item.name|musicRankText(11)}}</span>
+                        <span class="m-author">{{item.author|musicRankText(11)}}</span>
+                        <span class="m-poster">{{item.poster_url}}</span>
+                        <span class="m-times">{{item.play_times}}</span>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!--  -->
+        <div class="m-left">
+                <h2 class="p-title">Melodious<a href="javascript:;">more</a></h2>
+                <div class="music-list">
+                    <ul id="Melodious">
+                        <li>
+                            <span class="list-name">音乐标题</span>
+                            <span class="list-author">歌手</span>
+                            <span class="list-time">时长</span>
+                        </li>
+                        <li v-for="item in Melodious" @click="playListMusic($event,item)" v-bind:audio-src="item.url">
+                            <span class="m-name">{{item.name}}</span>
+                            <span class="m-author">{{item.author}}</span>
+                            <span class="m-time">{{item.time}}</span>
+                            <span class="m-poster">{{item.poster_url}}</span>
+                            <span class="m-play-times">{{item.play_times}}</span>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
+            <div class="m-right">
+                <h2 class="p-title">TOP7<a href="javascript:;">more</a></h2>
+                <div class="music-list">
+                    <ul id="Melodious_Rank">
+                        <li>
+                            <span class="r-title-name">音乐标题</span>
+                            <span class="r-title-author">歌手</span>
+                            <span class="r-title-times">播放次数</span>
+                        </li>
+                        <li v-for="(item,i) in Melodious_Rank" @click="playListMusic($event,item)" v-bind:title="item.name" v-bind:audio-src="item.url">
+                            <span v-bind:class="rank_n(i+1)">{{i+1}}</span>
+                            <span class="m-name">{{item.name|musicRankText(11)}}</span>
+                            <span class="m-author">{{item.author|musicRankText(11)}}</span>
+                            <span class="m-poster">{{item.poster_url}}</span>
+                            <span class="m-times">{{item.play_times}}</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <p>QQ : 973043289&nbsp;&nbsp;&nbsp;&nbsp;Email : 973043289@qq.com</p>
+    </div>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/layer/layer.js"></script>
+    <script src="js/index-v.js"></script>
+    <script src="js/three-h.js"></script>
+
+</body>
+
+</html>
